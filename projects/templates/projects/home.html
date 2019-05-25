@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% load staticfiles %}
+{% load static %}
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css" />
+  <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+  <title>Vincent Huang</title>
+</head>
+
+<body>
+  <div class="container">
+    <header id="main-header">
+      <div class="row no-gutters">
+        <div class="col-lg-4 col-md-5">
+
+          <img src="{% static 'Profile.jpg' %}" alt=""/>
+
+        </div>
+        <div class="col-lg-8 col-md-7">
+          <div class="d-felx flex-col">
+            <div class="p-5 bg-dark text-white">
+              <div class="d-flex flex-row justify-content-between aligh-item-center">
+                <h1 class="display-6">Vincent Huang</h1>
+
+                <div class="">
+                  <a href="#" class="text-white">
+                    <i class="far fa-file"></i>
+                  </a>
+                </div>
+
+                <div class="">
+                  <a href="https://www.linkedin.com/in/vincent-huang-6b6405149/" class="text-white">
+                    <i class="fab fa-linkedin"></i>
+                  </a>
+                </div>
+
+                <div class="">
+                  <a href=https://github.com/VincentCloud" class="text-white">
+                    <i class="fab fa-github"></i>
+                  </a>
+                </div>
+
+                <div class="d-none d-lg-block">
+                  <a href="https://www.instagram.com/vincent__hcz/?hl=en" class="text-white">
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="p-4 bg-dark text-white">
+              Computer Science & Musical Technology Student at McGill University
+            </div>
+
+            <div>
+              <div class="d-flex flex-row text-white aligh-items-stretch text-center">
+
+                <div class="port-item p-4 bg-primary" data-toggle="collapse" data-target="#home">
+                  <i class="fas fa-home fa-2x d-block"></i>
+                  <span class="d-none d-sm-block">Home</span>
+                </div>
+
+
+
+                <div class="port-item p-4 bg-success" data-toggle="collapse" data-target="#projects">
+                  <i class="far fa-file fa-2x d-block"></i>
+                  <span class="d-none d-sm-block">Projects</span>
+                </div>
+
+                <div class="port-item p-4 bg-warning" data-toggle="collapse" data-target="#interests">
+                    <i class="fas fa-server fa-2x d-block"></i>
+                    <span class="d-none d-sm-block">Interests</span>
+                </div>
+
+                <div class="port-item p-4 bg-danger" data-toggle="collapse" data-target="#contact">
+                    <i class="fas fa-envelope fa-2x d-block"></i>
+                    <span class="d-none d-sm-block">Contact</span>
+                </div>
+              </div>
+            </div>
+
+            
+
+            
+
+
+          </div>
+        </div>
+      </div>
+    </header>
+
+
+    <!-- HOME -->
+    <div id="home" class="collapse show">
+      <div class="card card-body bg-primary text-white py-5">
+        <h2>Welcome To My Page</h2>
+        <p class="class">
+          I am currently a Computer Science and Music Technology student at McGill University. 
+        </p>
+      </div>
+
+      <div class="card card-body py-5">
+        <h3>My Skills</h3>
+        <p>I am a coding enthusiast and I have experience using multiple languages and tools</p>
+        <hr>
+
+        <h4>Java</h4>
+        <div class="progress mb-3">
+          <div class="progress-bar bg-success" style="width:100%"></div>
+        </div>
+
+        <h4>Python</h4>
+        <div class="progress mb-3">
+          <div class="progress-bar bg-success" style="width:100%"></div>
+        </div>
+
+        <h4>Algorithm and Data Structures</h4>
+        <div class="progress mb-3">
+          <div class="progress-bar bg-success" style="width:100%"></div>
+        </div>
+
+        <h4>Django</h4>
+        <div class="progress mb-3">
+          <div class="progress-bar bg-success" style="width:75%"></div>
+        </div>
+
+      </div>
+    </div>
+
+    <!--Projects-->
+    <div id="projects" class="collapse">
+      <div class="card card-body bg-success text-white py-5">
+        <h2>My Projects</h2>
+        <p class="class">
+          My projects
+        </p>
+      </div>
+
+      <div class="card card-body py-5">
+        <h3>My Projects</h3>
+        <p>These are my projects</p>
+        
+        <div class="card-deck">
+
+        {% for project in projects.all %}
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">{{ project.name }}</h4>
+              <p class="card-text">{{ project.intro }}</p>
+
+              <p class="p-2 mb-3 bg-dark text-white">
+                Language: {{ project.language }}
+              </p>
+
+              <p class="p-2 mb-3 bg-dark text-white">
+                Source code: <a href=" {{project.src}} ">{{ project.src }}</a>
+              </p>
+            </div>
+
+            <div class="card-footer">
+              <h6 class="text-muted">{{ project.date_pretty }}</h6>
+            </div>
+          </div>
+        {% endfor %}
+
+
+        </div>
+        
+
+        
+      </div>
+    </div>
+
+
+        <!--Interests-->
+    <div id="interests" class="collapse">
+      <div class="card card-body bg-warning text-white py-5">
+        <h2>My Life</h2>
+        <p class="class">
+            I am a bass singer & VP Finance & Web Developer at <a href="http://effusion.ca/" >Effusion A Cappella</a>. I perform once 
+            a semester on our concerts, which are generally held in big venues. 
+        </p>
+      </div>
+
+      <div class="card card-body py-5">
+        <h3>Effusion A Cappella</h3>
+        <p>I am a bass singer & VP Finance & Web developer at <a href="http://effusion.ca/" >Effusion A Cappella</a>, which is 
+        a student-run A Cappella group. We rearrange and perform music in A Cappella form and have concerts semesterly.</p>
+      
+        <div class="row no-gutters">
+          <div class="col-md-3">
+            <a href="http://effusion.ca" target="_blank">
+              <img src="{% static 'effusion_1.jpg' %}" class="img-fluid">
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="http://effusion.ca" target="_blank">
+              <img src="{% static 'effusion_7.jpg' %}" class="img-fluid">
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="http://effusion.ca" target="_blank">
+              <img src="{% static 'effusion_3.jpg' %}" class="img-fluid">
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="http://effusion.ca" target="_blank">
+              <img src="{% static 'effusion_4.jpg' %}" class="img-fluid">
+            </a>
+          </div>
+        </div>
+
+        <div class="row no-gutters">
+          <div class="col-md-3">
+            <a href="http://effusion.ca" target="_blank">
+              <img src="{% static 'effusion_5.jpg' %}" class="img-fluid">
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="http://effusion.ca" target="_blank">
+              <img src="{% static 'effusion_6.jpg' %}" class="img-fluid">
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="http://effusion.ca" target="_blank">
+              <img src="{% static 'effusion_2.jpg' %}" class="img-fluid">
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="http://effusion.ca" target="_blank">
+              <img src="{% static 'effusion_8.jpg' %}" class="img-fluid">
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+    <!--Contact-->
+    <div id="contact" class="collapse">
+      <div class="card card-body bg-danger text-white py-5">
+        <h2>Contact</h2>
+        <p class="class">
+          I am currently a Computer Science and Music Technology student at McGill University. 
+        </p>
+      </div>
+
+      <div class="card card-body ppy-5">
+        <h3>Get in Touch</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta culpa officiis vitae praesentium quos alias?</p>
+
+        <form>
+<!--
+
+          
+          <div class="form-group">
+            <div class="input-group input-group-lg">
+              <div class="input-group-prepend">
+                <span class="input-group-text bg-danger text-white">
+                  <i class="fas fa-user">
+
+                  </i>
+                </span>
+              </div>
+
+              <input type="text" class="form-control bg-dark text-white" placeholder="Name">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="input-group input-group-lg">
+              <div class="input-group-prepend">
+                <span class="input-group-text bg-danger text-white">
+                  <i class="fas fa-envelope">
+
+                  </i>
+                </span>
+              </div>
+
+              <input type="text" class="form-control bg-dark text-white" placeholder="Email">
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="input-group input-group-lg">
+              <div class="input-group-prepend">
+                <span class="input-group-text bg-danger text-white">
+                  <i class="fas fa-pencil-alt">
+
+                  </i>
+                </span>
+              </div>
+
+              <textarea class="form-control bg-dark text-white" placeholder="Content"></textarea>
+            </div>
+          </div>
+-->
+
+          <a class="btn btn-danger btn-block btn-lg" href = "mailto:chenzhun.huang@mail.mcgill.ca">Email Me</a>
+        </form>
+      </div>
+    </div>
+
+    <br>
+    <br>
+
+
+
+      <!-- FOOTER-->
+      <footer class="text-muted">
+        <div class="container text-center">
+          <p>© Vincent Huang {% now "Y"%}</p>
+        </div>
+      </footer>
+
+  </div>
+
+  <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"></script>
+
+  <script>
+    // Get the current year for the copyright
+    $('.port-item').click(function(){
+      $('.collapse').collapse('hide');
+    });
+
+    $(document).on('click','[data-toggle="lightbox"]',function(e){
+      e.preventDefault();
+      $(this).ekkoLightbox();
+    });
+
+    $('#year').text(new Date().getFullYear());
+  </script>
+</body>
+
+</html>
