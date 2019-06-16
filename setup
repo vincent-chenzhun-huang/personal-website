@@ -1,0 +1,3 @@
+location /media/ {
+    root /home/djangodeploy/personal-website;
+}
