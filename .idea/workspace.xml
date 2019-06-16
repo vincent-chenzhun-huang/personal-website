@@ -20,11 +20,11 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="4">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="1992" />
-    <option name="y" value="12" />
+    <option name="y" value="-2" />
     <option name="width" value="468" />
-    <option name="height" value="528" />
+    <option name="height" value="542" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -101,15 +101,15 @@
       <option name="presentableId" value="Default" />
       <updated>1560697401179</updated>
       <workItem from="1560697402457" duration="977000" />
-      <workItem from="1560698954430" duration="243000" />
+      <workItem from="1560698954430" duration="484000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1220000" />
+    <option name="totallyTimeSpent" value="1461000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1992" y="12" width="468" height="528" extended-state="4" />
+    <frame x="1524" y="-2" width="935" height="542" extended-state="6" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.53317535" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -125,7 +125,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.33940774" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.3289183" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -136,6 +136,10 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Fixed github 404 and updated resume" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed github 404 and updated resume" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/setup">
